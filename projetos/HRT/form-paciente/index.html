@@ -38,29 +38,51 @@
         <form class="">
             <div class="row">
                 <div class="col">
-                <label class="mb-1">Inicio Prevísto:</label><br>
+                    <label class="mb-1">Inicio Prevísto:</label><br>
                     <input type="time" class="form-control" id="horaInicio" name="hora">
                 </div>
                 <div class="col">
-                <label class="mb-1">inicio Cirurgia:</label><br>
+                    <label class="mb-1">inicio Cirurgia:</label><br>
                     <input type="time" class="form-control" id="horaCirurgia" name="Inicio">
                 </div>
                 <div class="col">
-                <label class="mb-1">Fim Cirurgia:</label><br>
-                    <input type="time" class="form-control" id="horaFCirurgia" name="fim">
+                    <label class="mb-1">Fim Cirurgia:</label><br>
+                    <input type="time" class="form-control" id="horaFim" name="fim">
                 </div>
                 <div class="col">
-                <label class="mb-1">Saída Prevista:</label><br>
-                <input type="time" class="form-control" id="horaSaida" name="saida">
+                    <label class="mb-1">Saída Prevista:</label><br>
+                    <input type="time" class="form-control" id="horaSaida" name="saida">
                 </div>
-                
+
             </div>
         </form>
         <div class="mt-2">
-        <button type="button" class="btn btn-primary m-1">Novo</button>
-        <button type="button" class="btn btn-dark m-1">Gravar</button>
-        <button type="button" class="btn btn-danger m-1">Deletar</button>
+            <button type="button" class="btn btn-primary m-1">Novo</button>
+            <button type="button" class="btn btn-dark m-1">Gravar</button>
+            <button type="button" class="btn btn-danger m-1">Deletar</button>
         </div>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="col-5">Nome do Paciente</th>
+                    <th class="col-4">Status</th>
+                    <th>Inicio Previsto</th>
+                    <th>Hora Cirurgia</th>
+                    <th>Fim Cirurgia</th>
+                    <th>Saída Prevista</th>
+                </tr>
+
+
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td>Lista vazia</td>
+                    
+                </tr>
+            </tbody>
+           
+        </table>
 
 
 

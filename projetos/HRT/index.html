@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-bs-theme="ligth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,74 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="img/hospital_anchieta_logo.jpg">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body class="d-flex align-items-center py-4 bg-body-tertiary text-danger">
     <main class="w-100 m-auto form-container">
-        <form class="was-validated">
+        <form class="" id="form">
             <img src="img/hospital_anchieta_logo.jpg" class="mb-4 mx-auto d-block" height="57" width="72">
             <h1 class="h3 mb-3 fw-normal">Bem vindo ao Anchieta</h1>
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="digite seu email:" required>
-                <label for="floatingInput">E-mail</label>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+
+            <div class="form-floating ">
+                <input type="text" class="form-control required mt-4 mb-1" id="login" placeholder="login"
+                    onchange="validarlogin()">
+                <label>Login</label>
+                <span class="span-required d-none">Login deve ter no mínimo 3 caracteres</span>
+
+
+
+
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingInput" placeholder="digite sua senha" required>
-                <label for="floatingInput">Senha</label>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <input type="password" class="form-control required mt-4 mb-1" id="senha" placeholder="senha"
+                    minlength="8">
+                <label>Senha</label>
+
+
             </div>
+
             <div class="form-check text-start my-3">
-                <input type="checkbox" class="for-check-input" id="flex-CheckDefault">
+                <input type="checkbox" class="form-check-input" id="flex-CheckDefault">
+
                 <label class="form-check-label" for="flex-CheckDefault">Lembrar de mim</label>
+
             </div>
-            <button class="btn btn-primary w-100 py-2 btn-danger">Sign</button>
+            <div><button type="submit" class="btn btn-primary w-100 py-2 btn-danger"
+                    onclick="logar(); return false">Sign</button>
+            </div>
+
+
+            <div class="container-fluid align-items-center d-block mt-5">
+                <a href="visitantes/index.htm"><button type="button"
+                        class="form-control btn btn-warning btn-lg">Acompanhante</button></a>
+
+            </div>
+
         </form>
     </main>
+
+    <script>
+
+        function logar() {
+
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if (login == "senai" && senha == "HRT2024") {
+                alert('sucesso');
+                location.href = "http://127.0.0.1:5500/projetos/HRT/form-paciente/index.html"
+            }
+            else {
+                alert('Usario ou senha invalida');
+
+
+            }
+        }
+
+
+    </script>
+
 </body>
+
 </html>
