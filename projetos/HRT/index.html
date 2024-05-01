@@ -44,6 +44,10 @@
             <div><button type="submit" class="btn btn-primary w-100 py-2 btn-danger"
                     onclick="logar(); return false">Sign</button>
             </div>
+            <div class="container d-none p-4 bg-primary py-4 mt-5 text-center rounded" id="erro" >
+                <span  class="text-body h5 ">Erro "senha ou login incorretos" </span>
+            </div>
+
 
 
             <div class="container-fluid align-items-center d-block mt-5">
@@ -61,13 +65,16 @@
 
             var login = document.getElementById('login').value;
             var senha = document.getElementById('senha').value;
+            var msg   = document.getElementById('erro');
+
 
             if (login == "senai" && senha == "HRT2024") {
-                alert('sucesso');
+                alert('login efetuado');
                 location.href = "http://127.0.0.1:5500/projetos/HRT/form-paciente/index.html"
             }
             else {
                 alert('Usario ou senha invalida');
+                msg.classList.remove('d-none');
 
 
             }
