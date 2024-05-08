@@ -1,6 +1,6 @@
-// document.getElementById('bt-apagar').addEventListener('click', apagar);
+document.getElementById('bt-apagar').addEventListener('click', apagar);
 document.getElementById('bt-gravar').addEventListener('click', gravar);
-// document.getElementById('bt-novo').addEventListener('click', limparForm);
+document.getElementById('bt-novo').addEventListener('click', limparForm);
 let lsPessoa = [];
 
 let tpStatus = {
@@ -10,6 +10,8 @@ let tpStatus = {
 }
 function gravar() {
     let nome = document.getElementById('name').value;
+    let indice = document.getElementById('indice').value;
+    let _lineNumber = document.getElementById('_lineNumber').value;
     let status = document.getElementById('status').value;
     let local = document.getElementById('local').value;
     let horaI = document.getElementById('horaInicio').value;
@@ -17,17 +19,9 @@ function gravar() {
     let horaF = document.getElementById('horaFim').value;
     let horaS = document.getElementById('horaSaida').value;
 
-    // if (nome == "") {
-    //     lsItem.push(obj);
-    // } else {
-    //     lsItem[nome] = obj;
-    // }
-    // console.table(lsPessoa);
-
-    // if (nome === '' || status === '' || local === '' || horaI === '' || horaC === '' || horaF === '' || horaS === '') {
-    //     alert('Por favor, preencha todos os campos.');
-    //     return;
-    // }
+  
+    
+    if (nome != "" ){
     let obj = {
         nome: nome,
         status: status,
@@ -37,20 +31,29 @@ function gravar() {
         horaFim: horaF,
         horaSaida: horaS
     };
-    // if (indice == "") {
+    if (indice == "") {
         createRow(obj).then((o) => {
             lsPessoa.push(o);
             atualizarTabela();
-            
-        } );        
-    limparForm();
+
+        });
+    } else {
+        patchRow(_lineNumber, obj).then((o) => {
+            lsPessoa[indice] = o;
+            atualizarTabela();
+        });
+    }
+
+
+    limparForm(); }
 
 }
 
 function atualizarTabela() {
     let tbody = "";
+    let i = 0;
     for (const p of lsPessoa) {
-        tbody += `<tr>
+        tbody += `<tr onclick='editar(${i})'>
         <td>${p.nome}</td>
         <td class = "${tpStatus[p.status]}" >${p.status}</td>
         <td>${p.local}</td>
@@ -58,12 +61,8 @@ function atualizarTabela() {
         <td>${p.horaCirurgia}</td>
         <td>${p.horaFim}</td>
         <td>${p.horaSaida}</td>
-        
-        
         </tr>`
-
-
-
+        i++
     }
     document.getElementById("tbody").innerHTML = tbody;
 }
@@ -77,16 +76,32 @@ function limparForm() {
     document.getElementById('horaSaida').value = "";
 }
 
-// function editar(nome) {
-//     obj = lsItem[nome];
-//     document.getElementById('nome').value = nome;
-//     document.getElementById('status').value = obj.status;
-//     document.getElementById('local').value = obj.local;
-//     document.getElementById('horaInicio').value = obj.horaI;
-//     document.getElementById('horaCirurgia').value = obj.horaCirurgia;
-//     document.getElementById('horaFim').value = obj.horaF;
-//     document.getElementById('horaSaida').value = obj.horaS;
-// }
+function editar(i) {
+    obj = lsPessoa[i];
+    document.getElementById('name').value = obj.nome;
+    document.getElementById('indice').value = i;
+    document.getElementById('_lineNumber').value = obj._lineNumber;
+    document.getElementById('status').value = obj.status;
+    document.getElementById('local').value = obj.local;
+    document.getElementById('horaInicio').value = obj.horaInicio;
+    document.getElementById('horaCirurgia').value = obj.horaCirurgia;
+    document.getElementById('horaFim').value = obj.horaFim;
+    document.getElementById('horaSaida').value = obj.horaSaida;
+}
+
+function apagar(){
+    let indice = document.getElementById('indice').value;
+    let _lineNumber = document.getElementById('_lineNumber').value;
+    if (indice != ""){
+        deleteRow(_lineNumber).then(() =>{
+            lsPessoa.splice(indice, 1);
+            atualizarTabela();
+        });
+    }
+
+
+
+}
 
 
 
@@ -97,18 +112,38 @@ async function getData() {
     return data;
 }
 
-getData().then( (dados) => {
+getData().then((dados) => {
     lsPessoa = dados;
     atualizarTabela();
-} );
+});
 
 async function createRow(payload) {
-    
+
     const response = await fetch("https://api.zerosheets.com/v1/o6c", {
-      method: "POST",
-      body: JSON.stringify(payload)
+        method: "POST",
+        body: JSON.stringify(payload)
     });
     const data = await response.json();
-  
+
     return data;
+}
+
+async function patchRow(lineNumber, payload) {
+ 
+    const url = "https://api.zerosheets.com/v1/o6c/" + lineNumber;
+    const response = await fetch(url, {
+        method: "PATCH",
+        body: JSON.stringify(payload)
+    });
+    const data = await response.json();
+
+   
+    return data;
+}
+async function deleteRow(lineNumber) {
+    const url = "https://api.zerosheets.com/v1/o6c/" + lineNumber; 
+    await fetch(url, {
+        method: "DELETE"
+    });
+    
 }
