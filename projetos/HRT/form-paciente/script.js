@@ -94,6 +94,7 @@ function apagar(){
         deleteRow(_lineNumber).then(() =>{
             lsPessoa.splice(indice, 1);
             atualizarTabela();
+            limparForm();
         });
     }
 
