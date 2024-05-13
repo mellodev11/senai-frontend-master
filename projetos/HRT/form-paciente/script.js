@@ -1,6 +1,6 @@
-document.getElementById('bt-apagar').addEventListener('click', apagar);
-document.getElementById('bt-gravar').addEventListener('click', gravar);
-document.getElementById('bt-novo').addEventListener('click', limparForm);
+// document.getElementById('bt-apagar').addEventListener('click', apagar);
+// document.getElementById('bt-gravar').addEventListener('click', gravar);
+// document.getElementById('bt-novo').addEventListener('click', limparForm);
 let lsPessoa = [];
 
 let tpStatus = {
@@ -87,6 +87,9 @@ function editar(i) {
     document.getElementById('horaCirurgia').value = obj.horaCirurgia;
     document.getElementById('horaFim').value = obj.horaFim;
     document.getElementById('horaSaida').value = obj.horaSaida;
+    
+    
+    
 }
 
 function apagar(){
