@@ -75,8 +75,8 @@ function limparForm() {
     document.getElementById('horaCirurgia').value = "";
     document.getElementById('horaFim').value = "";
     document.getElementById('horaSaida').value = "";
-    // document.getElementById('indice').value = "";
-    // document.getElementById('_lineNumber').value = "";
+    document.getElementById('indice').value = "";
+    document.getElementById('_lineNumber').value = "";
 
 }
 
