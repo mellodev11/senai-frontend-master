@@ -29,7 +29,8 @@ function gravar() {
         horaInicio: horaI,
         horaCirurgia: horaC,
         horaFim: horaF,
-        horaSaida: horaS
+        horaSaida: horaS,
+        // _lineNumber: _lineNumber,
     };
     if (indice == "") {
         createRow(obj).then((o) => {
@@ -74,6 +75,9 @@ function limparForm() {
     document.getElementById('horaCirurgia').value = "";
     document.getElementById('horaFim').value = "";
     document.getElementById('horaSaida').value = "";
+    // document.getElementById('indice').value = "";
+    // document.getElementById('_lineNumber').value = "";
+
 }
 
 function editar(i) {
