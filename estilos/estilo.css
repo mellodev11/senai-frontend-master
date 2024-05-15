@@ -37,6 +37,11 @@ h1 {
     font-size: 1.6rem;
 }
 
+/* h1:hover{
+    background-color: rgb(218, 8, 8);
+    color: black;
+} */
+
 h2 {
     font-size: 0.8rem;
     color: rgb(241, 11, 11);
@@ -44,5 +49,5 @@ h2 {
 
 p {
     font-size: 0.7rem;
-    color: grey;
+    color: rgb(228, 180, 180);
 }
