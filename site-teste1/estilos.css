@@ -85,5 +85,12 @@ a{
     color: greenyellow;
     text-decoration: none;
     font-size: 20px;
+    text-align: center;
+   
     
+}
+a:hover{
+    background-color: chartreuse;
+    color: black;
+
 }
