@@ -1,0 +1,19 @@
+main{
+    display: block;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+h1{
+    color: rgb(42, 202, 122);
+    background-color: rgb(146, 129, 129);
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+}
+.number {
+    text-decoration: none;
+    text-decoration-style: none;
+}
