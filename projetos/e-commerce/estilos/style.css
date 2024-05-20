@@ -81,12 +81,16 @@ html {
   gap: 30px;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  /* margin: 2rem 4rem 2rem; */
+  /* margin-left: 2rem;
+  margin-right: 2rem; */
   /* opacity: 70%; */
 }
 .itens-catalogo img {
   width: 20rem;
   height: 20rem;
 }
+
 /* .itens-catalogo div{
     background-color: #a82020;
     box-shadow: 0px 0px 4px 1px;
@@ -97,11 +101,24 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10rem;
+  /* padding: 10rem; */
   flex-direction: column;
-  margin: 9rem;
-  opacity: 89%;
+  margin: 9rem 12rem 12rem 9rem;
+  opacity: 87%;
+  height: 35rem;
+  width: 35rem;
+  transition: 0.5s;
   /* border: 1rem; */
+}
+.itens-catalogo .info:hover{
+  /* opacity: .7;
+  padding: 12rem;
+  margin: 11rem;
+  background-color: aquamarine; */
+  height: 41rem;
+  width: 42rem;
+  
+  
 }
 .itens-catalogo .info h3 {
   font-size: 1.5rem;
