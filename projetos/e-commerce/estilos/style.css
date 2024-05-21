@@ -73,7 +73,7 @@ html {
     margin-top: 2rem;
 } */
 .itens-catalogo {
-  width: 1850px;
+  width: 1500px;
   /* display: grid; */
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 450px)); */
   display: flex;
@@ -114,7 +114,7 @@ html {
   opacity: 87%;
   height: 35rem;
   width: 35rem;
-  transition: 0.5s;
+  transition: 0.7s;
   /* border: 1rem; */
 }
 .itens-catalogo .info:hover{
