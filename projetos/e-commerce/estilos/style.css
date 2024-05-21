@@ -55,7 +55,7 @@ html {
 
 /* itens catálogo */
 .catalogo {
-  width: 100%;
+  /* width: 100%; */
   /* height: 100%; */
   display: flex;
   flex-direction: column;
@@ -73,14 +73,20 @@ html {
     margin-top: 2rem;
 } */
 .itens-catalogo {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 450px));
+  width: 1850px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 450px)); */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  gap: 10px;
+  /* margin: auto; */
+  /* margin: 20px 20px 20px 20px; */
+  /* margin-top: 2rem; */
+  /* margin-bottom: 2rem; */
+
+  
   /* margin: 2rem 4rem 2rem; */
   /* margin-left: 2rem;
   margin-right: 2rem; */
@@ -103,7 +109,8 @@ html {
   justify-content: center;
   /* padding: 10rem; */
   flex-direction: column;
-  margin: 9rem 12rem 12rem 9rem;
+  /* margin: 9rem 12rem 12rem 9rem; */
+  margin: 3rem;
   opacity: 87%;
   height: 35rem;
   width: 35rem;
