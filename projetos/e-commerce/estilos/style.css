@@ -73,7 +73,7 @@ html {
     margin-top: 2rem;
 } */
 .itens-catalogo {
-  width: 1850px;
+  width: 1500px;
   /* display: grid; */
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 450px)); */
   display: flex;
