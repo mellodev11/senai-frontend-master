@@ -73,5 +73,13 @@ let produtos = [
         fatias6: 35.00,
         fatias8: 45.00,
         fatias12: 55.00
+    },
+    {
+        img: "https://static8.depositphotos.com/1177973/861/i/950/depositphotos_8618524-stock-photo-delicious-pizza-with-seafood-on.jpg",
+        dsImg:"pizza sabor camarão",
+        nome: "Camarão Especial",
+        fatias6: 40.00,
+        fatias8: 60.00,
+        fatias12: 75.00
     }
 ];
