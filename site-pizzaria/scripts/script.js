@@ -47,19 +47,40 @@ let tbody = document.querySelector('tbody');
 function atualizarTabela(){
     tbody.innerHTML = '';
     let valorTotal = 0 ;
+    let id = 0; 
     for (const p of produtos) {
         if (p.quantidade > 0) {
             tbody.innerHTML += `  <tr>
             <td>${p.nome}</td>
             <td>${p.quantidade}x${p.fatias8}=${p.quantidade*p.fatias8}(8 fatias)</td>
             <td>
-                <i class="bi bi-plus-square-fill"></i>
-                <i class="bi bi-dash-square-fill"></i>
+            <i class="bi bi-plus-square-fill"id="plus${id}"></i>
+            <i class="bi bi-dash-square-fill"id="dash${id}"></i>
             </td>
-        </tr> `;
-        valorTotal += p.quantidade*p.fatias8;
+            </tr> `;
+            valorTotal += p.quantidade*p.fatias8;
         }
+        id++
         
     }
     document.querySelector('#total-pedido').innerHTML = `Valor total do pedido = R$${valorTotal}`;
+    atualizarPlusDash('plus');
+    atualizarPlusDash('dash');
+}
+function atualizarPlusDash(tipo){
+    let botoes = document.querySelectorAll(`.bi-${tipo}-square-fill`);
+    for (const bt of botoes) {
+        bt.addEventListener('click', () =>{
+            let id = bt.id.replace(tipo,'');
+            if (tipo == 'plus'){
+                produtos[id].quantidade++;
+            }
+            if (tipo == 'dash'){
+                produtos[id].quantidade--;
+            }
+            atualizarTabela();
+        });
+        
+    }
+
 }
