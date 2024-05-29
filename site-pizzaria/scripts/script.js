@@ -38,9 +38,16 @@ let lsPedido = document.querySelectorAll('.pedir');
  for (const bt of lsPedido) {
     bt.addEventListener('click', ()=>{
         let id = bt.id.replace('id', '');
-        produtos[id].quantidade = 1;
+        if(bt.innerHTML == 'REMOVER'){
+            produtos[id].quantidade = 0;
+            bt.innerHTML = 'pedir agora';
+        }else{
+            produtos[id].quantidade = 1;
+            bt.innerHTML = 'REMOVER';
+        }
         atualizarTabela();
     });
+    
 }
 
 let tbody = document.querySelector('tbody');
@@ -52,7 +59,7 @@ function atualizarTabela(){
         if (p.quantidade > 0) {
             tbody.innerHTML += `  <tr>
             <td>${p.nome}</td>
-            <td>${p.quantidade}x${p.fatias8}=${p.quantidade*p.fatias8}(8 fatias)</td>
+            <td>${p.quantidade}x${p.fatias8}=R$ ${p.quantidade * p.fatias8}(8 fatias)</td>
             <td>
             <i class="bi bi-plus-square-fill"id="plus${id}"></i>
             <i class="bi bi-dash-square-fill"id="dash${id}"></i>
@@ -84,3 +91,34 @@ function atualizarPlusDash(tipo){
     }
 
 }
+let enviar = document.querySelector('.enviar');
+
+enviar.addEventListener('click', () => {
+
+    let msg = 'Gostaria de fazer o seguinte pedido\n';
+
+    let total = 0;
+
+    for (const p of produtos) {
+
+        if (p.quantidade > 0) {
+
+            msg += `${p.nome} ${p.quantidade}x${p.fatias8}=${p.quantidade * p.fatias8}\n`;
+
+            total += p.quantidade * p.fatias8;
+
+        }
+
+    }
+
+    msg += `Total = ${total}`;
+
+    msg = encodeURI(msg);
+
+    let fone = '5561992918787';
+
+    let link = `https://api.whatsapp.com/send?phone=${fone}&text=${msg}`;
+
+    window.open(link);
+
+});
