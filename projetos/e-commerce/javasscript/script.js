@@ -10,8 +10,29 @@ for (const p of produtos) {
         </div>`
 id++;
 }
-let telaCarrinho = document.querySelector('.tela-carrinho');
-let continuar = document.querySelector('.continuar');
-continuar.addEventListener('click', ()=>{
-    telaCarrinho.classList.toggle('ocultar-tela-carrinho');
-})
+// let telaCarrinho = document.querySelector('.tela-carrinho');
+// let continuar = document.querySelector('.continuar');
+// continuar.addEventListener('click', ()=>{
+//     telaCarrinho.classList.toggle('ocultar-tela-carrinho');
+// })
+
+// let tbody = document.querySelector('tbody');
+// function atualizarTabela(){
+//     tbody.innerHTML = '';
+//     let valorTotal = 0 ;
+//     let id = 0; 
+//     for (const p of produtos) {
+//         if (p.quantidade > 0) {
+//             tbody.innerHTML += `  <tr>
+//             <td>${p.nome}</td>
+//             <td>${p.quantidade}x${p.valor}=R$ ${p.quantidade * p.valor}(valor)</td>
+//             <td>
+//             <i class="bi bi-plus-square-fill"id="plus${id}"></i>
+//             <i class="bi bi-dash-square-fill"id="dash${id}"></i>
+//             </td>
+//             </tr> `;
+//             valorTotal += p.quantidade*p.fatias8;
+//         }
+//         id++
+        
+//     }
