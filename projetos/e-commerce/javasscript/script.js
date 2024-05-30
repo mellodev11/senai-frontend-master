@@ -10,3 +10,8 @@ for (const p of produtos) {
         </div>`
 id++;
 }
+let telaCarrinho = document.querySelector('.tela-carrinho');
+let continuar = document.querySelector('.continuar');
+continuar.addEventListener('click', ()=>{
+    telaCarrinho.classList.toggle('ocultar-tela-carrinho');
+})
