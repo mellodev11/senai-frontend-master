@@ -1,3 +1,9 @@
+// const menuContent = document.querySelector('.content');
+// const show = true;
+
+
+
+
 let itensCatalogo = document.querySelector(".itens-catalogo");
 let id = 0;
 for (const p of produtos) {
@@ -10,11 +16,29 @@ for (const p of produtos) {
         </div>`
 id++;
 }
-// let telaCarrinho = document.querySelector('.tela-carrinho');
-// let continuar = document.querySelector('.continuar');
-// continuar.addEventListener('click', ()=>{
-//     telaCarrinho.classList.toggle('ocultar-tela-carrinho');
-// })
+
+let telaCarrinho = document.querySelector('.tela-carrinho');
+let carrinho = document.querySelector('.carrinho');
+carrinho.addEventListener('click', ()=>{
+  console.log('d');
+    telaCarrinho.classList.toggle('ocultar-tela-carrinho');
+    
+})
+
+let continuar = document.querySelector('.continuar');
+continuar.addEventListener('click', ()=>{
+    telaCarrinho.classList.toggle('ocultar-tela-carrinho');
+})
+
+
+
+
+
+
+
+
+
+
 
 // let tbody = document.querySelector('tbody');
 // function atualizarTabela(){
