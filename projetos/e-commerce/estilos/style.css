@@ -207,3 +207,28 @@ footer a{
   width: 90%;
   margin-top: 10px;
 }
+.rodape-carrinho{
+  background-color: #48b4d4;
+  border-radius: 7px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.rodape-carrinho .btn-home{
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  /* margin-top: 10px; */
+  color: #000;
+  margin: 4px 0px 4px 10px;
+  
+
+}
+.rodape-carrinho h1{
+  color: #000;
+  margin: 0 20px 0px 0px;
+  font-size: 1.8rem;
+}
+
