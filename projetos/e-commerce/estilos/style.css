@@ -52,13 +52,12 @@ html {
   width: 55px;
   height: 100%;
   border-radius: 9px;
-  /* padding-inline-start: 1rem; */
+ 
 }
 
-/* itens catálogo */
+
 .catalogo {
-  /* width: 100%; */
-  /* height: 100%; */
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,49 +66,32 @@ html {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  
 }
-/* .catalogo h2{
-    font-size: 5rem;
-    color: #0f5bbe;
-    text-transform: uppercase;
-    margin-top: 2rem;
-} */
+
 .itens-catalogo {
-  width: 1400px;
+  width: 1000px;
  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-
-
-  
-  /* margin: 2rem 4rem 2rem; */
-  /* margin-left: 2rem;
-  margin-right: 2rem; */
-  /* opacity: 70%; */
+ 
 }
 
-/* .itens-catalogo div{
-    background-color: #a82020;
-    box-shadow: 0px 0px 4px 1px;
-} */
+
 .itens-catalogo .info {
   background-color: rgb(221, 221, 221);
   border-radius: 1.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 10rem; */
   flex-direction: column;
-  /* margin: 9rem 12rem 12rem 9rem; */
-  margin: 3rem;
+  margin: 1.5rem;
   opacity: 87%;
-  height: 35rem;
-  width: 30rem;
+  height: 32rem;
+  width: 28rem;
   transition: 0.9s;
-  /* border: 1rem; */
 }
 
 .itens-catalogo .info h3 {
@@ -152,7 +134,7 @@ html {
   width: 20rem;
   height: 18rem;
   border-radius: 0.5rem;
-  transition: 0.5s;
+  transition: 1s;
 }
 .itens-catalogo .info img:hover{
   width: 25rem;
@@ -161,7 +143,7 @@ html {
 }
 footer{
   height: 35px;
-  /* width: 35px; */
+
   font-size: 1.4rem;
   
   display: flex;
@@ -169,13 +151,11 @@ footer{
   justify-content: center;
   color: white;
   background-color: #48b4d4;
-  /* position: absolute; */
-  /* margin-top: 5rem; */
+ 
 }
 footer a{
   text-decoration: none;
   color:#000;
-  /* text-transform: uppercase; */
   font-size: 1.8rem;
 }
 
