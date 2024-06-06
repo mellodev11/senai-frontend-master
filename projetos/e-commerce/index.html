@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce</title>
     <link rel="stylesheet" href="estilos/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
@@ -21,44 +25,55 @@
     </main>
 
     <section class="catalogo">
-      <div class="itens-catalogo">
-  
-      </div>
-
+      <div class="itens-catalogo"></div>
     </section>
     <section class="tela-carrinho ocultar-tela-carrinho">
       <div class="content-carrinho">
         <div class="rodape-carrinho">
-          <button class="btn-home">Home</button>  
+          <button class="btn-home">Home</button>
           <h1>Falta pouco para finalizar o seu pedido...</h1>
-
         </div>
         <h2>Lista de Compra</h2>
-          <table>
-              <thead>
-                  <tr>
-                      <th>Produto</th>
-                      <th>Preço</th>
-                      <th>Quantidade</th>
-                      <th>Total</th>
-                      <th>-</th>
-                  </tr>
-              </thead>
-              <tbody>
-                <td></td>
-                <td>R$ 120</td>
-                <td></td>
-                <td>R$ 240</td>
-                <td></td>
-              </tbody>
-          </table>
-          <p id="total-pedido"></p>
-          <button class="continuar">Continar Comprando</button>
-          <button class="enviar">Enviar Pedido</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+              <th>Total</th>
+              <th>-</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>R$ 120</td>
+              <td>
+                <div class="qty">
+                  <button><i class='bx bxs-message-square-add'></i></button>
+                  <span>1</span>
+                  <button><i class='bx bxs-message-square-minus' ></i></button>
+                </div>
+              </td>
+              <td>R$ 240</td>
+              <td class="remove">
+                <button class="">
+                  <i class="bx bxs-x-circle"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="total-pedido"></p>
+        <button class="continuar">Continar Comprando</button>
+        <button class="enviar">Enviar Pedido</button>
       </div>
-       </section>
+    </section>
     <footer>
-      <h4>Projeto de :  <a href="https://github.com/mellodev11"  target="blank">mellodev11 </a></h4>
+      <h4>
+        Projeto de :
+        <a href="https://github.com/mellodev11" target="blank">mellodev11 </a>
+      </h4>
     </footer>
   </body>
   <script src="javasscript/produtos.js"></script>

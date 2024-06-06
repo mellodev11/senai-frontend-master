@@ -200,16 +200,20 @@ footer a{
   font-size: 1.8rem;
   font-weight: bold;
 }
+
 /* .tela-carrinho .bi{
   cursor: pointer;
 } */
 .content-carrinho{
-  width: 90%;
-  margin-top: 10px;
+  width: 100%;
+  /* margin-top: 10px; */
+}
+.content-carrinho h2{
+  padding: 20px 0;
 }
 .rodape-carrinho{
   background-color: #48b4d4;
-  border-radius: 7px;
+  /* border-radius: 7px; */
   padding: 10px 0;
   display: flex;
   align-items: center;
@@ -230,5 +234,21 @@ footer a{
   color: #000;
   margin: 0 20px 0px 0px;
   font-size: 1.8rem;
+}
+tbody  .remove, tbody td{
+
+  text-align: center;
+}
+tbody .qty button{
+  /* background-color: red; */
+  border-radius: 15px;
+  padding: 5px 5px;
+  margin-bottom: 6px;
+}
+tbody .remove button {
+  border-radius: 15px;
+  padding: 5px 5px;
+  margin-bottom: 6px;
+  /* align-items: center; */
 }
 
