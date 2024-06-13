@@ -45,6 +45,7 @@ html {
   display: flex;
   margin-left: 15rem;
   margin-right: 0.6rem;
+  /* background-color: red; */
   
   
 }
@@ -52,7 +53,18 @@ html {
   width: 55px;
   height: 100%;
   border-radius: 9px;
+  /* background-color: red; */
  
+}
+.bx-cart-add{
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+
 }
 
 
@@ -180,14 +192,22 @@ footer a{
 }
 .tela-carrinho table{
   width: 100%;
+  /* height: 100%; */
+  border: 2px solid #000;
+  margin: 0 auto;
 }
 .tela-carrinho td{
-  font-size: 1.8rem;
-  border-bottom: 1px solid #48b4d4;
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #48b4d4;
 }
 .tela-carrinho p{
-  margin-top: 10px;
-  font-size: 1.8rem;
+  margin-top: 1px;
+  font-size: 2rem;
+}
+.tela-carrinho th{
+  margin-top: 1px;
+  font-size: 2rem;
 }
 .tela-carrinho button{
   background-color: #48b4d4;
@@ -206,10 +226,21 @@ footer a{
 } */
 .content-carrinho{
   width: 100%;
+  height: 100%;
+  text-align: center;
   /* margin-top: 10px; */
 }
 .content-carrinho h2{
   padding: 20px 0;
+}
+.content-carrinho td img{
+  width: 100%;
+  max-width: 90px;
+  max-height: 100px;
+  /* min-width: 40px; */
+  padding-top: 10px;
+  border-radius: 15%;
+  /* height: 50px; */
 }
 .rodape-carrinho{
   background-color: #48b4d4;
@@ -235,12 +266,13 @@ footer a{
   margin: 0 20px 0px 0px;
   font-size: 1.8rem;
 }
+/* 
 tbody  .remove, tbody td{
 
   text-align: center;
-}
-tbody .qty button{
-  /* background-color: red; */
+} */
+/* tbody .qty button{
+  /
   border-radius: 15px;
   padding: 5px 5px;
   margin-bottom: 6px;
@@ -249,6 +281,10 @@ tbody .remove button {
   border-radius: 15px;
   padding: 5px 5px;
   margin-bottom: 6px;
-  /* align-items: center; */
-}
+  
+} */
 
+#total-pedido {
+  font-size: 2rem; }
+
+  
