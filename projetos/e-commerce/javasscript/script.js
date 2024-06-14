@@ -21,7 +21,7 @@ id++;
 let telaCarrinho = document.querySelector('.tela-carrinho');
 let carrinho = document.querySelector('.carrinho');
 carrinho.addEventListener('click', ()=>{
-  console.log('d');
+ 
     telaCarrinho.classList.toggle('ocultar-tela-carrinho');
     
 })
