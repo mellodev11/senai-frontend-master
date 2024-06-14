@@ -25,11 +25,17 @@ carrinho.addEventListener('click', ()=>{
     telaCarrinho.classList.toggle('ocultar-tela-carrinho');
     
 })
-
+let home = document.querySelector('.btn-home');
 let continuar = document.querySelector('.continuar');
 continuar.addEventListener('click', ()=>{
     telaCarrinho.classList.toggle('ocultar-tela-carrinho');
+    
 })
+home.addEventListener('click', ()=>{
+    telaCarrinho.classList.toggle('ocultar-tela-carrinho');
+    
+})
+
 
 //até aqui tudo OK 
 
@@ -70,9 +76,9 @@ function atualizarTabela() {
                             <td> ${p.quantidade} </td>
                             <td> R$ ${p.quantidade * p.valor},00 </td>
                             <td>
-                                <i class="bi bi-plus-square-fill" id="plus${id}"></i>
+                                <i class="bx bx-plus" id="plus${id}"></i>
                     
-                                <i class="bi bi-dash-square-fill" id="dash${id}"></i>
+                                <i class="bx bx-minus" id="minus${id}"></i>
                             </td>
                         </tr>
             
@@ -83,17 +89,17 @@ function atualizarTabela() {
     }
     document.querySelector('#total-pedido').innerHTML = `Valor total do pedido = R$ ${total},00`;
     atualizarPlusDash('plus');
-    atualizarPlusDash('dash');
+    atualizarPlusDash('minus');
 }
 function atualizarPlusDash(tipo) {
-    let botoes = document.querySelectorAll(`.bi-${tipo}-square-fill`);
+    let botoes = document.querySelectorAll(`.bx-${tipo}`);
     for (const bt of botoes) {
         bt.addEventListener('click', () => {
             let id = bt.id.replace(tipo, '');
             if (tipo == 'plus') {
                 produtos[id].quantidade++;
             }
-            if (tipo == 'dash') {
+            if (tipo == 'minus') {
                 produtos[id].quantidade--;
                 if (produtos[id].quantidade < 1) {
                     document.getElementById('id' + id).click();
@@ -103,6 +109,37 @@ function atualizarPlusDash(tipo) {
         });
     }
 }
+let enviar = document.querySelector('.enviar');
+
+enviar.addEventListener('click', () => {
+
+    let msg = 'Gostaria de fazer o seguinte pedido:\n';
+
+    let total = 0;
+
+    for (const p of produtos) {
+
+        if (p.quantidade > 0) {
+
+            msg += `${p.nome} ${p.quantidade}x${p.valor}=${p.quantidade * p.valor}\n`;
+
+            total += p.quantidade * p.valor;
+
+        }
+
+    }
+
+    msg += `Total = ${total}`;
+
+    msg = encodeURI(msg);
+
+    let fone = '5561992918787';
+
+    let link = `https://api.whatsapp.com/send?phone=${fone}&text=${msg}`;
+
+    window.open(link);
+
+});
 
 
 
