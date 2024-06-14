@@ -252,6 +252,10 @@ footer a{
   border-radius: 15%;
 
 }
+/* .content-carrinho #plus{
+  background-color: red;
+  color: red;
+} */
 .rodape-carrinho{
   background-color: #48b4d4;
   /* border-radius: 7px; */
@@ -280,4 +284,18 @@ footer a{
 #total-pedido {
   font-size: 2rem; }
 
-  
+  .bx-plus:before {
+    border-radius: 10px;
+    background: white;
+    color: red;
+    content: "\ebc0";
+    cursor: pointer;
+}
+
+.bx-minus:before {
+  border-radius: 10px;
+  background: white;
+  color: red;
+  content: "\ebc0";
+  cursor: pointer;
+}
