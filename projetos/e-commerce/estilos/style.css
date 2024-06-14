@@ -237,6 +237,9 @@ footer a {
   min-width: 60px; */
   border: 2px solid #48b4d4;
 }
+.tela-carrinho span{
+  font-weight: bold;
+}
 
 .tela-carrinho p {
   margin-top: 1px;
@@ -277,6 +280,7 @@ footer a {
 
 .content-carrinho h2 {
   padding: 20px 0;
+  font-size: 5rem;
 }
 
 .content-carrinho td img {

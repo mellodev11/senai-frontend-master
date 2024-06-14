@@ -72,7 +72,7 @@ function atualizarTabela() {
             tbody.innerHTML += `
               <tr>
                             <td><img src="${p.img}"> </td>
-                            <td><span class="valor">${p.nome} =R$ ${p.valor},00 </span></td>
+                            <td><span class="valor">${p.nome} = R$ ${p.valor},00 </span></td>
                             <td> ${p.quantidade} </td>
                             <td> R$ ${p.quantidade * p.valor},00 </td>
                             <td>
